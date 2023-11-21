@@ -1,0 +1,21 @@
+.chrono {
+    background-color: black;
+    margin: auto;
+
+}
+
+.countdown {
+    display: flex;
+    flex-direction: column;
+}
+
+.countdown p {
+    font-size: 5rem;
+    color: white;
+    margin: auto;
+    font-weight: 700;
+}
+
+.buttons {
+    margin: auto;
+}
