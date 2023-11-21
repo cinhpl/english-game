@@ -1,7 +1,7 @@
 import './App.css';
 import { Footer } from './Components/Footer';
 import { Header } from './Components/Header';
-import { Chrono } from './Pages/Chrono';
+import { Timer } from './Pages/Timer';
 import { HomePage } from './Pages/HomePage';
 import Rules from './Pages/Rules';
 import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
@@ -13,7 +13,7 @@ function App() {
       <Header />
         <Routes>
           <Route path="/" element={<HomePage />} /> 
-          <Route path="/chrono" element={<Chrono />} />
+          <Route path="/timer" element={<Timer />} />
           <Route path="/rules" element={<Rules />} />
 
         </Routes>

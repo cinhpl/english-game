@@ -1,8 +1,8 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
-import './Chrono.css';
+import './Timer.css';
 
-export const Chrono = () => {
+export const Timer = () => {
     const [counter, setCounter] = useState(1800);
     const [isActive, setIsActive] = useState(true);
   
