@@ -1,4 +1,5 @@
-{
+const data = [
+  {
     "gameContents": {
       "dice": 1,
       "pawns": 6,
@@ -38,3 +39,6 @@
         }
       }
   }
+]
+
+export default data;
