@@ -1,12 +1,15 @@
 import React from 'react';
 import data from '../data';
 import './Rules.css';
+import { Header } from '../Components/Header';
+import { Footer } from '../Components/Footer';
 
 function Rules() {
   const { gameContents, gameContext, gameplay, scoreSheet } = data[0];
 
   return (
     <section className='rules'>
+    <Header />
       <h1>Rules</h1>
       <div className='gamecontext'>
         <p>Dice: {gameContents.dice}</p>
@@ -57,6 +60,7 @@ function Rules() {
           <p>{scoreSheet.hardQuestions.lose}</p>
         </div>
       </div>
+      <Footer />
     </section>
   );
 }
