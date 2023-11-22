@@ -2,6 +2,7 @@ import React from 'react';
 import data from '../data';
 import './Rules.css';
 import { Header } from '../Components/Header';
+import { Footer } from '../Components/Footer';
 import iconCards from '../Assets/iconcards.png';
 import chanceCards from '../Assets/chancecards.png';
 import eventCards from '../Assets/eventcards.png';
@@ -21,7 +22,7 @@ function Rules() {
   return (
     <section className='rules'>
     <Header />
-      <h1>Become the 1st company to have the most customers !</h1>
+      <h1>Rules</h1>
       <div className='gamecontext'>
         <div className='content'>
           <h3>Content :</h3>
@@ -107,6 +108,7 @@ function Rules() {
           <h2>Scan me !</h2>
         </div>
       </div>
+      <Footer />
     </section>
   );
 }

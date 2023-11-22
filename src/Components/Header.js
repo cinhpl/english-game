@@ -1,9 +1,10 @@
 import React  from 'react'
 import { Link } from 'react-router-dom';
 import './Styles.css';
-import logo from '../Images/logoTR.png';
+import logo from '../Assets/logoTR.png';
 
 export const Header = () => {
+
 
   return (
     <div className='header'>

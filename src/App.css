@@ -10,13 +10,5 @@ html, #root, body, #app, #app>div {
   background-repeat: no-repeat;
 }
 
-.App a {
-  font-size: 5rem;
-  margin: 8vw;
-  text-decoration: none;
-}
 
-.App a:hover {
-  border-bottom: 7px solid;
-  padding-bottom: 5px;
-}
+
