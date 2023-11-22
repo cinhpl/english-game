@@ -1,30 +1,55 @@
-body {
-    font-family: 'Montserrat', sans-serif;
-    background-color: #ffffff;
-    color: #FCCD0E;
-  }
-  
-  .rules {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .category {
-    background-color: #83CA99;
-    color: #262A62;
-    border-radius: 5px;
-    padding: 20px;
-    margin: 10px;
-    width: 80%;
-    text-align: center;
-    box-shadow:  3px 3px 8px #8f8f8f;
-  }
-  
-  h1, h2, h3 {
-    color: #262A62;
-  }
-  
-  p {
-    color: #FCCD0E;
-  }
+.rules {
+  font-family: 'LeagueSpartan', sans-serif; 
+}
+
+.rules h2, h3 {
+  font-family: 'Anton', sans-serif;
+  font-style: italic;
+}
+
+.rules h4 {
+  font-family: 'Anton', sans-serif;
+}
+
+.rules p {
+  font-family: 'Arimo', sans-serif;
+  text-align: justify;
+  line-height: 30px;
+}
+
+.rules img {
+  width: 20vw;
+  object-fit: cover;
+}
+
+.step-rules {
+  display: flex;
+}
+
+.gamecontext {
+  padding: 5vw;
+}
+
+.content {
+  background-color: rgb(252, 240, 240);
+  border-radius: 20px;
+}
+
+.case-rules {
+  background-color: rgb(252, 240, 240);
+  border-radius: 20px;
+  padding: 5vw;
+}
+
+.sheet-rules {
+  display: flex;
+}
+
+.sheet-rules img {
+  object-fit: contain;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+}

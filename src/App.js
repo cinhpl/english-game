@@ -1,6 +1,5 @@
 import './App.css';
 import { Footer } from './Components/Footer';
-import { Header } from './Components/Header';
 import { Timer } from './Pages/Timer';
 import { HomePage } from './Pages/HomePage';
 import Rules from './Pages/Rules';
@@ -10,14 +9,11 @@ function App() {
   return (
     <div className="App">
       <Router>
-      <Header />
         <Routes>
           <Route path="/" element={<HomePage />} /> 
           <Route path="/timer" element={<Timer />} />
           <Route path="/rules" element={<Rules />} />
-
         </Routes>
-        <Footer />
       </Router>
     </div>
   );

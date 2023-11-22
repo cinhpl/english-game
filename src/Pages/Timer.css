@@ -2,19 +2,75 @@
     margin: auto;
     width: 100vw;
     height: 100vw;
-}
-
-.countdown {
+  }
+  
+  .countdown {
     display: flex;
     flex-direction: column;
-}
-
-.countdown p {
-    font-size: 5rem;
+    justify-content: center;
+    margin-top: 10%;
+  }
+  
+  .countdown p {
+    font-size: 8vw;
     margin: auto;
     font-weight: 700;
-}
+    color: #262A62;
+  }
 
-.buttons {
-    margin: auto;
-}
+  .count-timer {
+    font-size: 20vw !important;
+    font-weight: 800 !important;
+  }
+
+  .circle {
+    margin-top: 2vh;
+    display: flex;
+    justify-content: center;
+    object-fit: cover;
+    filter: saturate(0);
+  }
+
+  .active {
+    opacity: 1;
+    filter: brightness(100%); /* Rend l'image pleinement lumineuse quand elle est active */
+  }
+    
+  .buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 2vh;
+  }
+
+  .buttons button {
+    padding: 2vw;
+    font-family: 'Quicksand', sans-serif;
+    border: none;
+    border-radius: 5px;
+    width: 30vw;
+    margin: 2vw;
+    font-weight: 600;
+    font-size: 5vw;
+  }
+
+  .start {
+    background: #262A62;
+    color: white;
+  }
+
+  .pause {
+    background-color: transparent;
+    border: solid 2px #262A62 !important;
+    color: #262A62;
+  }
+
+  .play {
+    background: #262A62;
+    color: white;
+  }
+
+  .restart {
+    background-color: transparent;
+    border: solid 2px #262A62 !important;
+    color: #262A62;
+  }
