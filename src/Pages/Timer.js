@@ -19,7 +19,7 @@ export const Timer = () => {
     const [isActive, setIsActive] = useState(false);
     const [countdown, setCountdown] = useState(null);
     const [play] = useSound(soundStart);
-    const [playMusic, { stop }] = useSound(music);
+    const [playMusic, { pause }] = useSound(music);
     const [playFinish] = useSound(soundfinish);
 
     const audioRef = useRef(null);
@@ -54,17 +54,20 @@ export const Timer = () => {
         play();
       }
     };
+
     const handlePauseResume = () => {
       setIsActive(!isActive);
-      stop();
-      playMusic()
+      if (isActive) {
+        pause();
+      } else {
+        playMusic();
+      }
     };
   
     const handleReset = () => {
       setIsActive(false);
       setCounter(1800);
       setCountdown(null);
-      stop()
     };
 
     const minutes = Math.floor(counter / 60);
