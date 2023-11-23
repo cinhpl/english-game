@@ -11,7 +11,6 @@ function App() {
           <Route path="/" element={<HomePage />} /> 
           <Route path="/timer" element={<Timer />} />
           <Route path="/rules" element={<Rules />} />
-
         </Routes>
     </div>
   );

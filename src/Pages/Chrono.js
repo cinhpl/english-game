@@ -26,7 +26,7 @@ export const Chrono = () => {
     return (
       <div className="chrono">
         <div className='countdown'>
-            <p>Countdown :</p>
+            <p>Countdown test:</p>
             <p>{counter}</p>
         </div>
         <div className='buttons'>
