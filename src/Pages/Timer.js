@@ -3,6 +3,7 @@ import './Timer.css';
 import { Header } from '../Components/Header';
 import soundStart  from '../Assets/sound-start.mp3';
 import soundfinish from '../Assets/soundfinish.mp3';
+import music from '../Assets/music.mp3';
 import useSound from 'use-sound';
 import { Footer } from '../Components/Footer';
 import red from '../Assets/hard.png';
@@ -18,6 +19,7 @@ export const Timer = () => {
     const [isActive, setIsActive] = useState(false);
     const [countdown, setCountdown] = useState(null);
     const [play] = useSound(soundStart);
+    const [playMusic, { stop }] = useSound(music);
     const [playFinish] = useSound(soundfinish);
 
     const audioRef = useRef(null);
@@ -38,26 +40,31 @@ export const Timer = () => {
       if (countdown > 0) {
         countdownTimer = setTimeout(() => setCountdown(countdown - 1), 1200);
       } else if (countdown === 0) {
+        playMusic();
         setIsActive(true);
         setCountdown(null);
       }
       return () => clearTimeout(countdownTimer);
+      //eslint-disable-next-line react-hooks/exhaustive-deps
     }, [countdown]);
   
     const handleStart = () => {
       if (!isActive && countdown === null) {
         setCountdown(4);
-        play()
+        play();
       }
     };
     const handlePauseResume = () => {
       setIsActive(!isActive);
+      stop();
+      playMusic()
     };
   
     const handleReset = () => {
       setIsActive(false);
       setCounter(1800);
       setCountdown(null);
+      stop()
     };
 
     const minutes = Math.floor(counter / 60);
