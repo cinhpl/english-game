@@ -1,10 +1,13 @@
-.rules {
-  font-family: 'LeagueSpartan', sans-serif; 
-}
-
-.rules h2, h3 {
+.rules h1, h2, h3 {
   font-family: 'Anton', sans-serif;
   font-style: italic;
+  justify-content: center;
+  display: flex;
+}
+
+.rules h1 {
+  font-size: 2rem;
+  margin: 2vh 0;
 }
 
 .rules h4 {
@@ -33,6 +36,13 @@
 .content {
   background-color: rgb(252, 240, 240);
   border-radius: 20px;
+  padding: 3vw;
+}
+
+.content-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
 .case-rules {
@@ -49,7 +59,4 @@
   object-fit: contain;
 }
 
-.container {
-  display: flex;
-  flex-direction: column;
-}
+.container {}

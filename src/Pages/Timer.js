@@ -7,6 +7,8 @@ import { Footer } from '../Components/Footer';
 import red from '../Assets/hard.png';
 import orange from '../Assets/medium.png';
 import green from '../Assets/easy.png';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faVolumeHigh } from '@fortawesome/free-solid-svg-icons';
 
 
 export const Timer = () => {
@@ -54,13 +56,13 @@ export const Timer = () => {
 
     const minutes = Math.floor(counter / 60);
     const seconds = counter % 60;
-  
     return (
       <div className="chrono">
         <Header />
         <div className='countdown'>
         <p>Countdown :</p>
-        {countdown !== null && (
+        {!isActive && countdown === null && counter === 1800 && <p style={{fontSize: '1rem'}}>PUT ON <FontAwesomeIcon icon={faVolumeHigh} className="blinking-icon" /></p>}
+          {countdown !== null && (
           <div style={{ display: 'flex', justifyContent: 'center' }}> 
             {countdown > 1 && <img src={red} className={countdown === 4 ? 'circle active' : 'circle'} alt="red" style={{ width: '30vw'}} />}
             {countdown > 1 && <img src={orange} className={countdown === 3 ? 'circle active' : 'circle'} alt="orange" style={{ width: '30vw'}} />}
@@ -70,7 +72,7 @@ export const Timer = () => {
           </div>
         )}
         <p className='count-timer'>{countdown !== null ? '' : `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`}</p>
-
+    
         </div>
         <div className='buttons'>
             {!isActive && countdown === null && counter === 1800 && (
@@ -87,4 +89,4 @@ export const Timer = () => {
         <Footer />
       </div>
     );
-}
+            }

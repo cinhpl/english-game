@@ -1,6 +1,7 @@
 import React from 'react';
 import data from '../data';
 import './Rules.css';
+import 'animate.css';
 import { Header } from '../Components/Header';
 import { Footer } from '../Components/Footer';
 import iconCards from '../Assets/iconcards.png';
@@ -22,28 +23,40 @@ function Rules() {
   return (
     <section className='rules'>
     <Header />
-      <h1>Rules</h1>
+      <h1 className='animate__animated animate__bounceInLeft'>Gameplay</h1>
       <div className='gamecontext'>
         <div className='content'>
           <h3>Content :</h3>
+          <div className='content-container'>
+          <div className='box'>
           <div className='container'>
-            <p><img src={dice} alt="dice" />{gameContents.dice} dice</p>
-            <p>{gameContents.pawns} pawns</p>
+              <p><img src={dice} alt="dice" />{gameContents.dice} dice</p>
+              </div>
+            <div className='container'>
+              <p>{gameContents.pawns} pawns</p>
+            </div>
+            <div className='container'>
             <p><img src={pawns} alt="pawns" />60 pawns (customers)</p>
+            </div>
           </div>
-          <div className='container'>
-            <div className='container-content'>
-              <img src={iconCards} alt="iconCards" />
-              <p>20 Questions cards</p>
+          
+            <div className='box'>
+              <div className='container-content'>
+                <img src={iconCards} alt="iconCards" />
+                <p>20 Questions cards</p>
             </div>
             <div className='container-content'>
+            <div className='container'>
               <img src={chanceCards} alt="chanceCards" />
               <p>20 Chance cards</p>
             </div>
-            <div className='container-content'>
+            <div className='container'>
               <img src={eventCards} alt="eventCards" />
               <p>20 Events cards</p>
             </div>
+            </div>
+          </div>
+        
           </div>
         </div>
         <div className='category'>
