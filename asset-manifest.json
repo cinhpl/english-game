@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/static/css/main.4727492e.css",
+    "main.js": "/static/js/main.4f6defdc.js",
+    "static/js/845.7e1a42f9.chunk.js": "/static/js/845.7e1a42f9.chunk.js",
+    "static/media/logoTR.png": "/static/media/logoTR.beb354accc15ef038fa9.png",
+    "static/media/sound-start.mp3": "/static/media/sound-start.eaecd32ab23b72cf6335.mp3",
+    "static/media/background.png": "/static/media/background.2c8c1bd181f6acb3550b.png",
+    "static/media/iconcards.png": "/static/media/iconcards.2404b61682a637b2230d.png",
+    "static/media/medium.png": "/static/media/medium.d997c7600bba726907bf.png",
+    "static/media/easy.png": "/static/media/easy.ccefa07eba8fec8edc44.png",
+    "static/media/hard.png": "/static/media/hard.f6f3ed802b009397a246.png",
+    "static/media/pawns.png": "/static/media/pawns.2ce7a9716d3b354aa13c.png",
+    "static/media/trofee.png": "/static/media/trofee.059f72e34d0755d75b5e.png",
+    "static/media/lucky.png": "/static/media/lucky.a27783462846c685f08e.png",
+    "static/media/chancecards.png": "/static/media/chancecards.5e247b35c565ca39eda4.png",
+    "index.html": "/index.html",
+    "main.4727492e.css.map": "/static/css/main.4727492e.css.map",
+    "main.4f6defdc.js.map": "/static/js/main.4f6defdc.js.map",
+    "845.7e1a42f9.chunk.js.map": "/static/js/845.7e1a42f9.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4727492e.css",
+    "static/js/main.4f6defdc.js"
+  ]
+}
