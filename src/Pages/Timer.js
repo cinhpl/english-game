@@ -19,7 +19,7 @@ export const Timer = () => {
     const [isActive, setIsActive] = useState(false);
     const [countdown, setCountdown] = useState(null);
     const [play] = useSound(soundStart);
-    const [playMusic, { stop }] = useSound(music);
+    const [playMusic, { pause, stop }] = useSound(music);
     const [playFinish] = useSound(soundfinish);
 
     const audioRef = useRef(null);
@@ -30,6 +30,7 @@ export const Timer = () => {
         timer = setTimeout(() => setCounter(counter - 1), 1000);
       } else if (counter === 0) {
         playFinish();
+        stop()
       }
       return () => clearTimeout(timer);
       // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -58,7 +59,7 @@ export const Timer = () => {
     const handlePauseResume = () => {
       setIsActive(!isActive);
       if (isActive) {
-        stop();
+        pause();
       } else {
         playMusic();
       }

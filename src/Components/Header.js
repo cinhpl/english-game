@@ -13,10 +13,10 @@ export const Header = () => {
             <img src={logo} alt="logo"/>
                 <ul>
                     <li>
-                        <Link to="/timer" style={{color: "#FCCD0E:"}}>Timer</Link>
+                        <Link to="/timer" style={{color: "#FCCD0E:", background: "#F05448"}}>Timer</Link>
                     </li>
                     <li>
-                        <Link to="/rules" style={{color: "#F05448"}}>Rules</Link>
+                        <Link to="/rules" style={{color: "#F05448", background: "rgb(72 41 161)"}}>Rules</Link>
                     </li>
                 </ul> 
             </div>

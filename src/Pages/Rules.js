@@ -26,7 +26,9 @@ function Rules() {
   return (
     <section className='rules'>
     <Header />
-      <h1 className='animate__animated animate__bounceInLeft'>Become the 1st company to have the most customers !</h1>
+      <div className='rules-title'>
+        <h1 className='animate__animated animate__bounceInLeft'>Become the 1st company to have the most customers !</h1>
+      </div>
       <div className='gamecontext'>
         <div className='content'>
           <h3>Content :</h3>
@@ -39,11 +41,11 @@ function Rules() {
             <div className='animate__animated animate__fadeInUp'>
               <img src={women} alt="women" />
               <img src={men} alt="men" />
-              <p>{gameContents.pawns} pawns</p>
+              <p>{gameContents.pawns} player pawns</p>
             </div>
             <div className='animate__animated animate__fadeInUp'>
             <img src={pawns} alt="pawns" />
-            <p>60 pawns customers</p>
+            <p>60 customers</p>
             </div>
           </div>
           
@@ -67,7 +69,7 @@ function Rules() {
         <div className='category'>
           <h3 className='animate__animated animate__fadeInBottomRight'>Game Principle :</h3>
           <p style={{display: 'block'}} className='animate__animated animate__fadeInUp'>
-  {"You manage a fictional online commercial company, and with your actual knowledge of traffic acquisition, you must earn the largest number of customers possible in a limited time. You already start the game with 1110 clients ! (one of each customer’s pawns : 1 = 10, 1 = 100 and 1 = 1000) ! Answer questions of varying difficulties, pick different chance cards and face unexpected events. Each player takes their turn by rolling a dice. Depending on the box you land on, you either gain or lose clients. Be the first to gather the most clients in 30 minutes !".split('.').map((sentence, i, arr) => <span key={i}>{sentence}{i !== arr.length - 1 && '.'}<br /></span>)}
+  {"You manage a fictional online commercial company, and with your actual knowledge of traffic acquisition, you must win the largest number of customers possible in a limited time. You already start the game with 1230 customers ! (one of each customer’s pawns : 3 = 10, 2 = 100 and 1 = 1000) Answer questions of varying difficulties, pick different chance cards and face unexpected events. Each player takes their turn by rolling a dice. Depending on the box you land on, you either gain or lose clients. Be the first to gather the most clients in 30 minutes !".split('.').map((sentence, i, arr) => <span key={i}>{sentence}{i !== arr.length - 1 && '.'}<br /></span>)}
 </p>
           <p className="animate__animated animate__heartBeat" style={{fontSize: '1.2rem', color: 'red', fontWeight: 'bold', display: 'flex', justifyContent: 'center'}}>Ready ? 3,2,1... Get started !</p>
           <img src={trofee} alt="trofee" style={{display: 'flex', justifyContent: 'center', margin: 'auto'}}/>
@@ -92,19 +94,19 @@ function Rules() {
           <div className="case-rules">
             <div className='sheet-rules'>
               <img src={iconCards} alt="iconsCards" />
-              <p><strong><em>"Questions" boxes :</em></strong> If a player lands on this box, the player on his left picks a question of the corresponding color and asks him the question. If he answers correctly, he gains the number of customers indicated at the end of the rules. If he answer incorrectly, he loses customers. The correct answers to the questions is shown in bold.</p>
+              <p><strong><em>"Questions" boxes :</em></strong> If a player lands on this box, the player on his left picks a question of the corresponding color and asks him the question. If he answers correctly, he gains the number of customers indicated at the end of the rules. If he answer incorrectly, he loses customers. The correct answers to the questions is shown in <strong>bold</strong>.</p>
             </div>
             <div className='sheet-rules'>
               <img src={events} alt="events" />
-              <p><strong>"Events" boxes :<em></em></strong> If a player lands on this box, the player on his left picks a question of the corresponding color and asks him the question. If he answers correctly, he gains the number of customers indicated at the end of the rules. If he answer incorrectly, he loses customers. The correct answers to the questions is shown in bold.</p>
+              <p><strong>"Events" boxes :<em></em></strong>If a player lands on this box, the player picks an event card and keep it in front of him. He can play it directly or whenever he wants during the game time. There are “attack” and “defense” cards, which are used in his advantage. (Steal customers from other companies).</p>
             </div>
             <div className='sheet-rules'>
               <img src={lucky} alt="lucky" />
-              <p><strong><em>"Chances" boxes :</em></strong>If a player lands on this box, the player on his left picks a question of the corresponding color and asks him the question. If he answers correctly, he gains the number of customers indicated at the end of the rules. If he answer incorrectly, he loses customers. The correct answers to the questions is shown in bold.</p>
+              <p><strong><em>"Chances" boxes :</em></strong>If a player lands on this box, the player picks a chance card and must play it immediately. There are lucky and bad luck cards so that’s a surprise ! You can either win or lose customers. And you must answer imposed question by the player on your right.</p>
             </div>
             <div className='sheet-rules'>
               <img src={grey} alt="grey"/>
-              <p><strong><em>"Grey" boxes :</em></strong> If a player lands on this box, the player use the big dice in order to make a 6. He only has one chance. If he manages to make a 6 he wins 100 customers otherwise, nothing happens and the next player plays.</p>        
+              <p><strong><em>"Grey" boxes :</em></strong>If a player lands on this box, the player use the big dice in order to make an even number (2,4,6). He only has one chance. If he succeeds, he wins 100 customers otherwise, nothing happens and the next player plays. After that, he must answer a question of his choice !</p>        
             </div>
           </div>
         </div>
