@@ -14,8 +14,8 @@ const data = [
       "chanceCards": 30,
       "eventCards": 30
     },
-    "gameContext": "You manage a fictional online commercial company, and with your actual knowledge of traffic acquisition, you must earn the largest number of customers possible in a limited time. You already start the game with 1110 clients ! (one of each customer’s pawns : 1 = 10, 1 = 100 and 1 = 1000) ! Answer questions of varying difficulties, pick different chance cards and face unexpected events. Each player takes their turn by rolling a dice. Depending on the box you land on, you either gain or lose clients. Be the first to gather the most clients in 30 minutes ! Ready ? 3,2,1... Get started ! ",
-    "gameplay": {
+    "gameContext": "You manage a fictional online commercial company, and with your actual knowledge of traffic acquisition, you must earn the largest number of customers possible in a limited time. You already start the game with 1110 clients ! (one of each customer’s pawns : 1 = 10, 1 = 100 and 1 = 1000) ! Answer questions of varying difficulties, pick different chance cards and face unexpected events. Each player takes their turn by rolling a dice. Depending on the box you land on, you either gain or lose clients. Be the first to gather the most clients in 30 minutes !  "
+    ,"gameplay": {
       "start": "Each player rolls the die to determine the order of play. The one with the highest number starts. Scan the QR code and start the 30-minute timer. Players take their turn by rolling the die.",
       "questionBoxes": "If a player lands on this box, the player on his left picks a question of the corresponding color and asks him the question. If he answers correctly, he gains the number of customers indicated at the end of the rules. If he answer incorrectly, he loses customers. The correct answers to the questions is shown in bold.",
       "eventBoxes": "If a player lands on this box, the player picks an event card and keep it in front of him. He can play it directly or whenever he wants during the game time. There are “attack” and “defense” cards, which are used in his advantage. (Steal customers from other companies)",
@@ -25,16 +25,16 @@ const data = [
     },
     "scoreSheet": {
         "easyQuestions": {
-          "win": "Win 10 customers",
-          "lose": "Lose 100 customers"
+          "win": "10 customers",
+          "lose": "100 customers"
         },
         "mediumQuestions": {
-          "win": "Win 100 customers",
-          "lose": "Lose 10 customers"
+          "win": "100 customers",
+          "lose": "10 customers"
         },
         "hardQuestions": {
-          "win": "Win 1000 customers",
-          "lose": "Lose 100 customers"
+          "win": "1000 customers",
+          "lose": "100 customers"
         }
       }
   }

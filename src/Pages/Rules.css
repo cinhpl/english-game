@@ -3,26 +3,34 @@
   font-style: italic;
   justify-content: center;
   display: flex;
+  letter-spacing: 1px;
 }
 
 .rules h1 {
-  font-size: 2rem;
-  margin: 2vh 0;
+  font-size: 1.5rem;
+  margin: auto;
+  padding: 5vw;
+  text-align: center;
 }
 
 .rules h4 {
   font-family: 'Anton', sans-serif;
+  letter-spacing: 1px;
 }
 
 .rules p {
   font-family: 'Arimo', sans-serif;
   text-align: justify;
   line-height: 30px;
+  font-size: 1rem;
 }
+
+
 
 .rules img {
   width: 20vw;
-  object-fit: cover;
+  object-fit: contain;
+
 }
 
 .step-rules {
@@ -37,6 +45,25 @@
   background-color: rgb(252, 240, 240);
   border-radius: 20px;
   padding: 3vw;
+}
+
+.category {
+  border-bottom: solid 1px;
+  padding-bottom: 2vh;
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+}
+
+.animate__animated {
+  display: flex;
+  justify-content: center;
+}
+
+.animate__animated img {
+  width: 15%;
+  object-fit: cover;
+  margin-right: 20px;
 }
 
 .content-container {
@@ -58,5 +85,3 @@
 .sheet-rules img {
   object-fit: contain;
 }
-
-.container {}

@@ -2,11 +2,13 @@ import React, { useState, useEffect, useRef } from 'react';
 import './Timer.css';
 import { Header } from '../Components/Header';
 import soundStart  from '../Assets/sound-start.mp3';
+import soundfinish from '../Assets/soundfinish.mp3';
 import useSound from 'use-sound';
 import { Footer } from '../Components/Footer';
 import red from '../Assets/hard.png';
 import orange from '../Assets/medium.png';
 import green from '../Assets/easy.png';
+import start from '../Assets/start.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faVolumeHigh } from '@fortawesome/free-solid-svg-icons';
 
@@ -16,6 +18,7 @@ export const Timer = () => {
     const [isActive, setIsActive] = useState(false);
     const [countdown, setCountdown] = useState(null);
     const [play] = useSound(soundStart);
+    const [playFinish] = useSound(soundfinish);
 
     const audioRef = useRef(null);
   
@@ -23,8 +26,11 @@ export const Timer = () => {
       let timer;
       if (isActive && counter > 0) {
         timer = setTimeout(() => setCounter(counter - 1), 1000);
+      } else if (counter === 0) {
+        playFinish();
       }
       return () => clearTimeout(timer);
+      // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [counter, isActive]);
 
     useEffect(() => {
@@ -67,7 +73,7 @@ export const Timer = () => {
             {countdown > 1 && <img src={red} className={countdown === 4 ? 'circle active' : 'circle'} alt="red" style={{ width: '30vw'}} />}
             {countdown > 1 && <img src={orange} className={countdown === 3 ? 'circle active' : 'circle'} alt="orange" style={{ width: '30vw'}} />}
             {countdown > 1 && <img src={green} className={countdown === 2 ? 'circle active' : 'circle'} alt="green" style={{ width: '30vw'}}/>}
-            {countdown === 1 ? <p>START</p> : <div className='circle blue'></div>}
+            {countdown === 1 ?<img src={start} alt="start" style={{ width: '40vw'}}/> : <div className='circle blue'></div>}
             <audio ref={audioRef} src={soundStart} />
           </div>
         )}

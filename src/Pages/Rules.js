@@ -16,70 +16,78 @@ import events from '../Assets/events.png';
 import lucky from '../Assets/lucky.png';
 import grey from '../Assets/grey.png';
 import chrono from '../Assets/chrono.png';
+import women from '../Assets/women.png';
+import men from '../Assets/men.png';
+
 
 function Rules() {
-  const { gameContents, gameContext, gameplay, scoreSheet } = data[0];
+  const { gameContents, scoreSheet } = data[0];
 
   return (
     <section className='rules'>
     <Header />
-      <h1 className='animate__animated animate__bounceInLeft'>Gameplay</h1>
+      <h1 className='animate__animated animate__bounceInLeft'>Become the 1st company to have the most customers !</h1>
       <div className='gamecontext'>
         <div className='content'>
           <h3>Content :</h3>
           <div className='content-container'>
           <div className='box'>
-          <div className='container'>
-              <p><img src={dice} alt="dice" />{gameContents.dice} dice</p>
+          <div className='animate__animated animate__fadeInUp'>
+          <img src={dice} alt="dice" />
+              <p>{gameContents.dice} dice</p>
               </div>
-            <div className='container'>
+            <div className='animate__animated animate__fadeInUp'>
+              <img src={women} alt="women" />
+              <img src={men} alt="men" />
               <p>{gameContents.pawns} pawns</p>
             </div>
-            <div className='container'>
-            <p><img src={pawns} alt="pawns" />60 pawns (customers)</p>
+            <div className='animate__animated animate__fadeInUp'>
+            <img src={pawns} alt="pawns" />
+            <p>60 pawns customers</p>
             </div>
           </div>
           
             <div className='box'>
-              <div className='container-content'>
+              <div className='animate__animated animate__fadeInUp'>
                 <img src={iconCards} alt="iconCards" />
                 <p>20 Questions cards</p>
             </div>
-            <div className='container-content'>
-            <div className='container'>
-              <img src={chanceCards} alt="chanceCards" />
+            <div className='animate__animated animate__fadeInUp'>
+              <img src={chanceCards} alt="chanceCards"  style={{transform: 'rotate(-90deg)'}}  />
               <p>20 Chance cards</p>
             </div>
-            <div className='container'>
-              <img src={eventCards} alt="eventCards" />
+            <div className='animate__animated animate__fadeInUp'>
+              <img src={eventCards} alt="eventCards"  style={{transform: 'rotate(-90deg)'}} />
               <p>20 Events cards</p>
-            </div>
             </div>
           </div>
         
           </div>
         </div>
         <div className='category'>
-          <h3>Game Principle :</h3>
-          <p>{gameContext}</p>
-          <img src={trofee} alt="trofee" />
+          <h3 className='animate__animated animate__fadeInBottomRight'>Game Principle :</h3>
+          <p style={{display: 'block'}} className='animate__animated animate__fadeInUp'>
+  {"You manage a fictional online commercial company, and with your actual knowledge of traffic acquisition, you must earn the largest number of customers possible in a limited time. You already start the game with 1110 clients ! (one of each customer’s pawns : 1 = 10, 1 = 100 and 1 = 1000) ! Answer questions of varying difficulties, pick different chance cards and face unexpected events. Each player takes their turn by rolling a dice. Depending on the box you land on, you either gain or lose clients. Be the first to gather the most clients in 30 minutes !".split('.').map((sentence, i, arr) => <span key={i}>{sentence}{i !== arr.length - 1 && '.'}<br /></span>)}
+</p>
+          <p className="animate__animated animate__heartBeat" style={{fontSize: '1.2rem', color: 'red', fontWeight: 'bold', display: 'flex', justifyContent: 'center'}}>Ready ? 3,2,1... Get started !</p>
+          <img src={trofee} alt="trofee" style={{display: 'flex', justifyContent: 'center', margin: 'auto'}}/>
         </div>
         <div className='category-rules'>
           <div className='category'>      
-            <h2>Gameplay</h2>
+            <h2 className="animate__animated animate__fadeInBottomRight">Gameplay</h2>
             <div className='step-rules'>
               <img src={startgame} alt="startgame" />
-              <p>Each player rolls the die to determine the order of play. The one with the highest number starts. </p>
+              <p>Each player rolls the die to determine the order of play. <br />The one with the highest number starts. </p>
             </div>
             <div className='step-rules'>
               <img src={qrCode} alt="qrCode" />
-              <p>Scan the QR code at the end of the rules or on the board game, and start the 30 minute timer.</p>
+              <p>Scan the QR code on the board game to start the 30 minute timer and you can also scan the QR at the end of this page to see the rules on your phone.</p>
             </div>
             <div className='step-rules'>
               <img src={dice} alt="dice" />
               <p>Players take their turn by rolling the dice in order to arrive on a box. The boxes have different results :</p>
             </div>
-            <p>End: {gameplay.end}</p>
+           
           </div>
           <div className="case-rules">
             <div className='sheet-rules'>
@@ -95,29 +103,28 @@ function Rules() {
               <p><strong><em>"Chances" boxes :</em></strong>If a player lands on this box, the player on his left picks a question of the corresponding color and asks him the question. If he answers correctly, he gains the number of customers indicated at the end of the rules. If he answer incorrectly, he loses customers. The correct answers to the questions is shown in bold.</p>
             </div>
             <div className='sheet-rules'>
-              <img src={grey} alt="grey" />
-              <p><strong><em>"Grey" boxes :</em></strong>If a player lands on this box, the player on his left picks a question of the corresponding color and asks him the question. If he answers correctly, he gains the number of customers indicated at the end of the rules. If he answer incorrectly, he loses customers. The correct answers to the questions is shown in bold.</p>        
+              <img src={grey} alt="grey"/>
+              <p><strong><em>"Grey" boxes :</em></strong> If a player lands on this box, the player use the big dice in order to make a 6. He only has one chance. If he manages to make a 6 he wins 100 customers otherwise, nothing happens and the next player plays.</p>        
             </div>
           </div>
         </div>
-        <p><img src={chrono} alt="chrono" />{gameplay.end}</p>
+        <p style={{display: 'flex'}}><img src={chrono} alt="chrono" />Play and accumulate as many customers as possible ! <br />The game ends when the timer stops. You have 30 minutes. This is an ultimate race so you have to be quick before running out of time ! <br />Good luck !</p>
+        <div className='questions'>
         <div className='category'>
           <h4 style={{ color: '#83CB99'}}>Easy Questions</h4>
-          <p>{scoreSheet.easyQuestions.win}</p>
-          <p>{scoreSheet.easyQuestions.lose}</p>
+          <p style={{textAlign: 'center'}}>Win <span style={{fontWeight: 'bold'}}>{scoreSheet.easyQuestions.win}</span></p>
+          <p style={{textAlign: 'center'}}>Lose <span style={{fontWeight: 'bold'}}>{scoreSheet.easyQuestions.lose}</span></p>
         </div>
         <div className='category'>
           <h4 style={{ color: '#FDCD0D'}}>Medium Questions</h4>
-          <p>{scoreSheet.mediumQuestions.win}</p>
-          <p>{scoreSheet.mediumQuestions.lose}</p>
+          <p style={{textAlign: 'center'}}>Win <span style={{fontWeight: 'bold'}}>{scoreSheet.mediumQuestions.win}</span></p>
+          <p style={{textAlign: 'center'}}>Lose <span style={{fontWeight: 'bold'}}>{scoreSheet.mediumQuestions.lose}</span></p>
         </div>
         <div className='category'>
           <h4 style={{ color: '#F05347'}}>Hard Questions</h4>
-          <p>{scoreSheet.hardQuestions.win}</p>
-          <p>{scoreSheet.hardQuestions.lose}</p>
+          <p style={{textAlign: 'center'}}>Win <span style={{fontWeight: 'bold'}}>{scoreSheet.hardQuestions.win}</span></p>
+          <p style={{textAlign: 'center'}}>Lose <span style={{fontWeight: 'bold'}}>{scoreSheet.hardQuestions.lose}</span></p>
         </div>
-        <div className='qrcode'>
-          <h2>Scan me !</h2>
         </div>
       </div>
       <Footer />
