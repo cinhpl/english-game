@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/traffic-race/static/css/main.65df4c0e.css",
-    "main.js": "/traffic-race/static/js/main.edf0d383.js",
+    "main.js": "/traffic-race/static/js/main.49100b34.js",
     "static/js/845.7e1a42f9.chunk.js": "/traffic-race/static/js/845.7e1a42f9.chunk.js",
     "static/media/logoTR.png": "/traffic-race/static/media/logoTR.beb354accc15ef038fa9.png",
     "static/media/sound-start.mp3": "/traffic-race/static/media/sound-start.eaecd32ab23b72cf6335.mp3",
@@ -16,11 +16,11 @@
     "static/media/chancecards.png": "/traffic-race/static/media/chancecards.5e247b35c565ca39eda4.png",
     "index.html": "/traffic-race/index.html",
     "main.65df4c0e.css.map": "/traffic-race/static/css/main.65df4c0e.css.map",
-    "main.edf0d383.js.map": "/traffic-race/static/js/main.edf0d383.js.map",
+    "main.49100b34.js.map": "/traffic-race/static/js/main.49100b34.js.map",
     "845.7e1a42f9.chunk.js.map": "/traffic-race/static/js/845.7e1a42f9.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.65df4c0e.css",
-    "static/js/main.edf0d383.js"
+    "static/js/main.49100b34.js"
   ]
 }
