@@ -38,11 +38,11 @@ function Rules() {
             </div>
             <div className='container-content'>
               <img src={chanceCards} alt="chanceCards" />
-              <p>30 Chance cards</p>
+              <p>20 Chance cards</p>
             </div>
             <div className='container-content'>
               <img src={eventCards} alt="eventCards" />
-              <p>30 Events cards</p>
+              <p>20 Events cards</p>
             </div>
           </div>
         </div>
@@ -89,7 +89,6 @@ function Rules() {
         </div>
         <p><img src={chrono} alt="chrono" />{gameplay.end}</p>
         <div className='category'>
-          <h3>Score Sheet</h3>
           <h4 style={{ color: '#83CB99'}}>Easy Questions</h4>
           <p>{scoreSheet.easyQuestions.win}</p>
           <p>{scoreSheet.easyQuestions.lose}</p>
