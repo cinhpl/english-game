@@ -1,20 +1,17 @@
 import './App.css';
-import { Footer } from './Components/Footer';
 import { Timer } from './Pages/Timer';
 import { HomePage } from './Pages/HomePage';
 import Rules from './Pages/Rules';
-import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
+import { Routes, Route} from 'react-router-dom';
 
 function App() {
   return (
     <div className="App">
-      <Router>
         <Routes>
           <Route path="/" element={<HomePage />} /> 
           <Route path="/timer" element={<Timer />} />
           <Route path="/rules" element={<Rules />} />
         </Routes>
-      </Router>
     </div>
   );
 }
